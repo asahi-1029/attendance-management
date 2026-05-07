@@ -1,0 +1,137 @@
+html {
+    background-color: #F0EFF2;
+}
+
+/* =====================
+   ヘッダー
+===================== */
+.header {
+    background-color: #000;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.header__logo {
+    width: 370px;
+    height: auto;
+}
+
+.header__nav {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header__link-logout {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header__nav a:hover,
+.header__link-logout:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+   メイン
+===================== */
+.attendance-detail {
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.title__bar {
+    display: inline-block;
+    width: 7px;
+    height: 30px;
+    background-color: #000;
+    margin-right: 10px;
+}
+
+.attendance-detail__list {
+    width: 100%;
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.attendance-detail__row {
+    display: flex;
+    border-bottom: 2px solid #E1E1E1;
+    padding: 30px;
+    gap: 50px;
+}
+
+.attendance-detail__row:last-child {
+    border-bottom: none;
+}
+
+.attendance-detail__label {
+    width: 250px;
+    /* ←固定幅にする */
+    color: #737373;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.attendance-detail__value {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    flex: 1;
+    /* ←残り全部使う */
+}
+
+.attendance-detail__value--date {
+    gap: 100px;
+    /* ←出勤・退勤と同じ感覚に調整 */
+}
+
+.form__button {
+    display: flex;
+    margin-top: 50px;
+    justify-content: flex-end;
+}
+
+.form__button-admit {
+    background-color: #000;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+
+.form__button-admit:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.form__button-admitted {
+    background-color: #696969;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 10px;
+}

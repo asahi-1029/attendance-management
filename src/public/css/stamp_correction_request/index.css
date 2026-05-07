@@ -1,0 +1,130 @@
+html {
+    background-color: #F0EFF2;
+}
+
+/* =====================
+   ヘッダー
+===================== */
+.header {
+    background-color: #000;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.header__logo {
+    width: 370px;
+    height: auto;
+}
+
+.header__nav {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header__link-logout {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header__nav a:hover,
+.header__link-logout:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+   メイン
+===================== */
+.application {
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.title__bar {
+    display: inline-block;
+    width: 7px;
+    height: 30px;
+    background-color: #000;
+    margin-right: 10px;
+}
+
+.tab {
+    margin-top: 50px;
+}
+
+.tab a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    margin-right: 50px;
+    margin-left: 30px;
+}
+
+.tab a.active {
+    font-weight: bold;
+}
+
+.divider {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #000;
+}
+
+/* =====================
+   テーブル
+===================== */
+.application-table {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.application-table th,
+.application-table td {
+    font-size: 16px;
+    font-weight: bold;
+    color: #737373;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.application-table th {
+    border-bottom: 3px solid #E1E1E1;
+}
+
+.application-table td {
+    border-bottom: 2px solid #E1E1E1;
+}
+
+/* 最後の行の線消す */
+.application-table tr:last-child td {
+    border-bottom: none;
+}
+
+.application-table a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.application-table a:hover {
+    text-decoration: underline;
+}

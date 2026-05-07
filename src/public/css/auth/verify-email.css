@@ -1,0 +1,74 @@
+/* =====================
+   ヘッダー
+===================== */
+.header {
+    background-color: #000;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.header__logo {
+    width: 370px;
+    height: auto;
+}
+
+/* =====================
+   メイン
+===================== */
+.main__content {
+    max-width: 720px;
+    height: 58px;
+    margin: 300px auto 0;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+.form__button-auth {
+    display: flex;
+    justify-content: center;
+    /* 横 */
+    align-items: center;
+    /* 縦 */
+    margin: 90px auto 0;
+    width: 257px;
+    height: 69px;
+    background-color: #D9D9D9;
+    border: 1px solid #000000;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.form__button-auth:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.form__link {
+    display: block;
+    color: #0073CC;
+    font-size: 20px;
+    margin: 50px auto;
+    text-align: center;
+    text-decoration: none;
+    background: none;
+    /* ← 背景消す */
+    border: none;
+    /* ← 枠消す */
+    padding: 0;
+    /* ← 余白リセット */
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.form__link:hover {
+    text-decoration: underline;
+}

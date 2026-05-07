@@ -1,0 +1,164 @@
+html {
+    background-color: #F0EFF2;
+}
+/* =====================
+   ヘッダー
+===================== */
+.header {
+    background-color: #000;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.header__logo {
+    width: 370px;
+    height: auto;
+}
+
+.header__nav {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header__link-logout {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header__nav a:hover,
+.header__link-logout:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+   メイン
+===================== */
+.attendance {
+    max-width: 680px;
+    margin: 250px auto;
+    text-align: center;
+}
+
+.attendance__status {
+    display: inline-block;
+    background-color: #C8C8C8;
+    color: #696969;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 40px;
+    padding: 6px 20px;
+    margin-bottom: 40px;
+}
+
+.attendance__date {
+    font-size: 40px;
+}
+
+.attendance__time {
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+
+.attendance__button {
+    display: flex;
+    justify-content: center;
+}
+
+.attendance__button-start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 70px;
+}
+
+.attendance__button-start:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* 出勤中 */
+.attendance__button-group {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.attendance__button-end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 70px;
+}
+
+.attendance__button-braak-start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 55px;
+    border: none;
+}
+
+.attendance__button-end:hover,
+.attendance__button-braak-start:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* 休憩中 */
+.attendance__button-break-end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 55px;
+    border: none;
+}
+
+.attendance__button-break-end {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* 退勤後 */
+.attendance__message {
+    font-size: 26px;
+    font-weight: bold;
+}

@@ -1,0 +1,107 @@
+/* =====================
+   ヘッダー
+===================== */
+.header {
+    background-color: #000;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.header__logo {
+    width: 370px;
+    height: auto;
+}
+
+/* =====================
+   ログインエリア
+===================== */
+.login {
+    max-width: 680px;
+    margin: 80px auto;
+}
+
+.login__heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.login__heading h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* =====================
+   フォーム
+===================== */
+.form__group {
+    margin-bottom: 20px;
+}
+
+.form__group-title {
+    margin-bottom: 8px;
+}
+
+.form__group-title label {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.form__input--text input {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+/* エラー表示用 */
+.form__error {
+    margin-top: 5px;
+    min-height: 20px;
+    color: red;
+    font-size: 20px;
+}
+
+/* =====================
+   ボタン
+===================== */
+.form__button {
+    margin-top: 70px;
+}
+
+.form__button-login {
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+}
+
+.form__button-login:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* =====================
+   登録リンク
+===================== */
+.form__link {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    color: #0073CC;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.form__link:hover {
+    text-decoration: underline;
+}
