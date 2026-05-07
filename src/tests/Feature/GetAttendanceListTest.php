@@ -21,6 +21,7 @@ class GetAttendanceListTest extends TestCase
      */
     public function test_自分が行った勤怠情報が全て表示されている()
     {
+        Carbon::setTestNow(Carbon::create(2026, 4, 23));
         $clockIn = Carbon::create(2026, 4, 23, 10, 0);
         $clockOut = Carbon::create(2026, 4, 23, 13, 0);
         $startTime = Carbon::create(2026, 4, 23, 11, 0);
@@ -37,7 +38,7 @@ class GetAttendanceListTest extends TestCase
 
         $attendance = Attendance::create([
             'user_id' => $user->id,
-            'date' => now()->toDateString(),
+            'date' => '2026-04-23',
             'clock_in' => $clockIn,
             'clock_out' => $clockOut,
         ]);
