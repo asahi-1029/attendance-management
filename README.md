@@ -1,4 +1,4 @@
-# フリーマーケット
+# 勤怠管理アプリ
 
 ## 概要
 本プロジェクトは、Laravelを使用したフリマアプリケーションです。出退勤、修正の申請、承認が行えます。
@@ -23,7 +23,7 @@ DB_USERNAME=laravel_user
 DB_PASSWORD=laravel_pass
 
 MAIL_FROM_ADDRESS=example@example.com
-MAIL_FROM_NAME="Free Market"
+MAIL_FROM_NAME="Attendance Management"
 ```
 
 - php artisan key:generate
@@ -104,4 +104,4 @@ DB_PASSWORD=root
 - vendor/bin/phpunit
 
 ## ER図
-<img width="1001" height="645" alt="スクリーンショット 2026-02-27 161647" src="https://github.com/user-attachments/assets/9cb0ca17-076b-4f6a-9748-b2300aa2a003" />
+<img width="1040" height="808" alt="image" src="https://github.com/user-attachments/assets/a6e3418b-7fa3-4069-97cb-97d3daf7cda7" />
