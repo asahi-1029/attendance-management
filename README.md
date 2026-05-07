@@ -104,4 +104,5 @@ DB_PASSWORD=root
 - vendor/bin/phpunit
 
 ## ER図
-<img width="1040" height="808" alt="image" src="https://github.com/user-attachments/assets/a6e3418b-7fa3-4069-97cb-97d3daf7cda7" />
+<img width="1198" height="922" alt="image" src="https://github.com/user-attachments/assets/be320313-e7cc-4be6-9c70-24ee0ce85d58" />
+
