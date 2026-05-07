@@ -1,11 +1,10 @@
-# laravel-docker-template
 # フリーマーケット
 
 ## 概要
-本プロジェクトは、Laravelを使用したフリマアプリケーションです。商品の閲覧、出品、購入、およびユーザープロフィール管理が可能です。
+本プロジェクトは、Laravelを使用したフリマアプリケーションです。出退勤、修正の申請、承認が行えます。
 
 ## Dockerビルド
-- git clone git@github.com:asahi-1029/free-market.git
+- git clone git@github.com:asahi-1029/attendance-management.git
 - docker-compose up -d --build
 
 ## Laravel環境構築
@@ -33,25 +32,23 @@ MAIL_FROM_NAME="Free Market"
 
 ## 開発環境
 
-### 誰でもアクセス可能
-- 商品一覧画面（トップ画面）: http://localhost/
-- 商品一覧画面（トップ画面）_マイリスト : http://localhost/?tab=mylist
-- 商品詳細画面 : http://localhost/item/{item_id}
-
 ### 認証必須
 - ログアウト : http://localhost/logout
-- プロフィール設定画面（初回ログイン時）: http://localhost/setup
-- 商品購入画面 : http://localhost/purchase/{item_id}
-- 住所変更ページ : http://localhost/purchase/address/{item_id}
-- 商品出品画面 : http://localhost/sell
-- プロフィール画面 : http://localhost/mypage
-- プロフィール編集画面（設定画面）: http://localhost/mypage/profile
-- プロフィール画面_購入した商品一覧 : http://localhost/mypage?page=buy
-- プロフィール画面_出品した商品一覧 : http://localhost/mypage?page=sell
+- 出勤登録画面（一般ユーザー）: http://localhost/attendance
+- 勤怠一覧画面（一般ユーザー）: http://localhost/attendance/list
+- 勤怠詳細画面（一般ユーザー）: http://localhost/attendance/detail/{id}
+- 申請一覧画面（一般ユーザー）: http://localhost/stamp_correction_request/list
+- 勤怠一覧画面（管理者） : http://localhost/admin/attendance/list
+- 勤怠詳細画面（管理者） : http://localhost/admin/attendance/{id}
+- スタッフ一覧画面（管理者） : http://localhost/admin/staff/list
+- スタッフ別勤怠一覧画面（管理者）: http://localhost/admin/attendance/staff/{id}
+- 申請一覧画面（管理者）: http://localhost/stamp_correction_request/list
+- 申請一覧画面（管理者） : http://localhost/stamp_correction_request/approve/{attendance_correct_request_id}
 
 ### 認証関連
-- 会員登録画面 : http://localhost/register
-- ログイン画面 : http://localhost/login
+- 会員登録画面 （一般ユーザー） : http://localhost/register
+- ログイン画面 （一般ユーザー） : http://localhost/login
+- ログイン画面（管理者） : http://localhost/admin/login
 - メール認証誘導画面 : http://localhost/email/verify
 
 ### 開発環境ツール
