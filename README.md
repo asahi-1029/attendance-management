@@ -1,1 +1,110 @@
 # laravel-docker-template
+# フリーマーケット
+
+## 概要
+本プロジェクトは、Laravelを使用したフリマアプリケーションです。商品の閲覧、出品、購入、およびユーザープロフィール管理が可能です。
+
+## Dockerビルド
+- git clone git@github.com:asahi-1029/free-market.git
+- docker-compose up -d --build
+
+## Laravel環境構築
+- docker-compose exec php bash
+- composer install
+- cp .env.example .env
+
+### データベース設定
+.envファイルを以下のように設定してください。
+```
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel_db
+DB_USERNAME=laravel_user
+DB_PASSWORD=laravel_pass
+
+MAIL_FROM_ADDRESS=example@example.com
+MAIL_FROM_NAME="Free Market"
+```
+
+- php artisan key:generate
+- php artisan migrate
+- php artisan db:seed
+
+## 開発環境
+
+### 誰でもアクセス可能
+- 商品一覧画面（トップ画面）: http://localhost/
+- 商品一覧画面（トップ画面）_マイリスト : http://localhost/?tab=mylist
+- 商品詳細画面 : http://localhost/item/{item_id}
+
+### 認証必須
+- ログアウト : http://localhost/logout
+- プロフィール設定画面（初回ログイン時）: http://localhost/setup
+- 商品購入画面 : http://localhost/purchase/{item_id}
+- 住所変更ページ : http://localhost/purchase/address/{item_id}
+- 商品出品画面 : http://localhost/sell
+- プロフィール画面 : http://localhost/mypage
+- プロフィール編集画面（設定画面）: http://localhost/mypage/profile
+- プロフィール画面_購入した商品一覧 : http://localhost/mypage?page=buy
+- プロフィール画面_出品した商品一覧 : http://localhost/mypage?page=sell
+
+### 認証関連
+- 会員登録画面 : http://localhost/register
+- ログイン画面 : http://localhost/login
+- メール認証誘導画面 : http://localhost/email/verify
+
+### 開発環境ツール
+- phpMyadmin : http://localhost:8080/
+- mailhog : http://localhost:8025/
+
+## 使用技術（実行環境）
+- PHP 8.1.x
+- Laravel 8.83.8
+- HTML/CSS
+- JavaScript（Vanilla JS）
+- MySQL 8.0.26
+- nginx 1.21.1
+- phpMyAdmin
+- MailHog
+
+## テスト手順
+
+### テスト用データベース作成
+
+MySQLコンテナへ接続
+
+- docker-compose exec mysql bash
+- mysql -u root -p
+
+テスト用データベースを作成
+- CREATE DATABASE demo_test;
+
+### テスト用環境ファイル作成
+- cp .env .env.testing
+
+### .env.testing のデータベース設定
+`.env.testing` を以下のように設定してください。
+```
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=demo_test
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+
+### アプリケーションキー生成
+- php artisan key:generate --env=testing
+
+### マイグレーション
+- php artisan migrate --env=testing
+
+### テスト実行
+設定キャッシュをクリア
+- php artisan config:clear
+テストを実行
+- vendor/bin/phpunit
+
+## ER図
+<img width="1001" height="645" alt="スクリーンショット 2026-02-27 161647" src="https://github.com/user-attachments/assets/9cb0ca17-076b-4f6a-9748-b2300aa2a003" />
