@@ -78,7 +78,7 @@ Route::post('/admin/login', [AuthenticatedSessionController::class, 'store'])
 | Admin Routes
 |--------------------------------------------------------------------------
 */
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth','admin'])->group(function () {
 
     Route::get('/admin/attendance/list',[AdminAttendanceController::class, 'index']);
     Route::get('/admin/staff/list',[AdminStaffController::class, 'index']);
